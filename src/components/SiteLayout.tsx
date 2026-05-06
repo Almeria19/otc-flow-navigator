@@ -1,5 +1,5 @@
 import { Outlet, NavLink, Link, useNavigate } from "react-router-dom";
-import { Anchor, Menu, X, ArrowRight } from "lucide-react";
+import { Anchor, Menu, X, Radio } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -40,8 +40,8 @@ export default function SiteLayout() {
 
           <div className="hidden md:flex items-center gap-2">
             <Button variant="ghost" onClick={() => navigate("/login")}>Connexion</Button>
-            <Button onClick={() => navigate("/contact")} className="bg-gradient-primary shadow-glow hover:opacity-90">
-              Devis gratuit <ArrowRight className="h-4 w-4 ml-1" />
+            <Button onClick={() => navigate("/")} className="bg-gradient-primary shadow-glow hover:opacity-90">
+              <Radio className="h-4 w-4 mr-1.5" /> Suivre un conteneur
             </Button>
           </div>
 
@@ -60,7 +60,7 @@ export default function SiteLayout() {
             ))}
             <div className="flex gap-2 pt-2">
               <Button variant="outline" className="flex-1" onClick={() => { setOpen(false); navigate("/login"); }}>Connexion</Button>
-              <Button className="flex-1 bg-gradient-primary" onClick={() => { setOpen(false); navigate("/contact"); }}>Devis</Button>
+              <Button className="flex-1 bg-gradient-primary" onClick={() => { setOpen(false); navigate("/"); }}>Suivre</Button>
             </div>
           </div>
         )}
