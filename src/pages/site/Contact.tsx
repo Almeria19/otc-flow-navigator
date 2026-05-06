@@ -89,10 +89,10 @@ export default function Contact() {
             </div>
             <div className="space-y-1.5">
               <Label className="text-xs text-muted-foreground">Type de demande *</Label>
-              <Select defaultValue="devis">
+              <Select defaultValue="suivi">
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="devis">Demande de devis</SelectItem>
+                  <SelectItem value="suivi">Question sur un suivi conteneur</SelectItem>
                   <SelectItem value="info">Demande d'information</SelectItem>
                   <SelectItem value="partenariat">Partenariat</SelectItem>
                   <SelectItem value="support">Support client</SelectItem>
