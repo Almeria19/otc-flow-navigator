@@ -15,7 +15,7 @@ export default function Login() {
     setLoading(true);
     setTimeout(() => {
       toast.success("Connexion réussie");
-      navigate("/");
+      navigate("/admin");
     }, 600);
   };
 
