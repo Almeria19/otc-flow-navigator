@@ -65,8 +65,7 @@ export default function ContainerDetail() {
                   <animate attributeName="r" from="14" to="28" dur="2s" repeatCount="indefinite" />
                   <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite" />
                 </circle>
-                <circle cx="450" cy="170" r="8" fill="hsl(var(--primary))" />
-                <Ship x="442" y="162" />
+                <circle cx="450" cy="170" r="8" fill="hsl(var(--primary))" stroke="hsl(var(--background))" strokeWidth="2" />
               </g>
               <text x="100" y="225" fill="hsl(var(--muted-foreground))" fontSize="11" fontFamily="monospace">{c.origin}</text>
               <text x="660" y="145" fill="hsl(var(--muted-foreground))" fontSize="11" fontFamily="monospace">{c.destination}</text>
