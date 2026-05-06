@@ -55,10 +55,10 @@ export default function Services() {
         <Card className="p-10 md:p-14 text-center bg-gradient-card border-border/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-glow opacity-50" />
           <div className="relative">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Un projet logistique ?</h2>
-            <p className="text-muted-foreground mt-4 max-w-xl mx-auto">Notre équipe vous répond sous 24h avec une offre adaptée.</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Suivez votre conteneur</h2>
+            <p className="text-muted-foreground mt-4 max-w-xl mx-auto">Accédez au tracking temps réel depuis la page d'accueil.</p>
             <Button asChild size="lg" className="mt-8 bg-gradient-primary shadow-glow hover:opacity-90">
-              <Link to="/contact">Demander un devis <ArrowRight className="h-4 w-4 ml-1" /></Link>
+              <Link to="/">Suivre un conteneur <ArrowRight className="h-4 w-4 ml-1" /></Link>
             </Button>
           </div>
         </Card>
