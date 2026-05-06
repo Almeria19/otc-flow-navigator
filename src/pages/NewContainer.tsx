@@ -37,7 +37,7 @@ export default function NewContainer() {
     setSubmitting(true);
     setTimeout(() => {
       toast.success("Conteneur créé avec succès", { description: "Redirection vers le détail..." });
-      navigate("/conteneurs/1");
+      navigate("/admin/conteneurs/1");
     }, 700);
   };
 
