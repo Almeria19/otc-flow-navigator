@@ -27,7 +27,7 @@ export default function Containers() {
           <p className="text-muted-foreground mt-1">Suivi en temps réel de la flotte logistique.</p>
         </div>
         <Button asChild className="bg-gradient-primary shadow-glow hover:opacity-90">
-          <Link to="/conteneurs/nouveau"><Plus className="h-4 w-4 mr-1" />Nouveau conteneur</Link>
+          <Link to="/admin/conteneurs/nouveau"><Plus className="h-4 w-4 mr-1" />Nouveau conteneur</Link>
         </Button>
       </div>
 

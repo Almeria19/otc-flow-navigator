@@ -88,7 +88,7 @@ export default function Dashboard() {
         <Card className="p-6 bg-gradient-card border-border/50">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-semibold flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-warning" /> Alertes</h3>
-            <Link to="/notifications" className="text-xs text-primary hover:underline">Tout voir</Link>
+            <Link to="/admin/notifications" className="text-xs text-primary hover:underline">Tout voir</Link>
           </div>
           <div className="space-y-3">
             {urgent.concat(notifications.filter(n => n.type === "info").slice(0, 2)).slice(0, 4).map(n => (
@@ -113,7 +113,7 @@ export default function Dashboard() {
             <h3 className="font-semibold">Dernières opérations</h3>
             <p className="text-xs text-muted-foreground mt-0.5">Mises à jour temps réel</p>
           </div>
-          <Link to="/conteneurs" className="text-xs text-primary hover:underline flex items-center gap-1">
+          <Link to="/admin/conteneurs" className="text-xs text-primary hover:underline flex items-center gap-1">
             Voir tous <ArrowUpRight className="h-3 w-3" />
           </Link>
         </div>

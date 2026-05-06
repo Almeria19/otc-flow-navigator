@@ -21,7 +21,7 @@ export default function ContainerDetail() {
 
   return (
     <div className="space-y-6 max-w-[1600px] mx-auto">
-      <Link to="/conteneurs" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors">
+      <Link to="/admin/conteneurs" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors">
         <ArrowLeft className="h-4 w-4" /> Retour aux conteneurs
       </Link>
 
@@ -95,7 +95,7 @@ export default function ContainerDetail() {
               <div className="flex justify-between"><span className="text-muted-foreground">Conteneurs actifs</span><span className="font-semibold">{client.containers}</span></div>
             </div>
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/clients">Voir fiche complète</Link>
+              <Link to="/admin/clients">Voir fiche complète</Link>
             </Button>
           </div>
 
