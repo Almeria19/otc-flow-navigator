@@ -8,24 +8,24 @@ import {
 } from "@/components/ui/sidebar";
 
 const mainItems = [
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
-  { title: "Conteneurs", url: "/conteneurs", icon: Container },
-  { title: "Nouveau conteneur", url: "/conteneurs/nouveau", icon: Plus, accent: true },
-  { title: "Clients", url: "/clients", icon: Users },
-  { title: "Facturation", url: "/facturation", icon: Receipt },
-  { title: "Notifications", url: "/notifications", icon: Bell, badge: 3 },
-  { title: "Demandes de livraison", url: "/livraisons", icon: Truck },
+  { title: "Dashboard", url: "/admin", icon: LayoutDashboard },
+  { title: "Conteneurs", url: "/admin/conteneurs", icon: Container },
+  { title: "Nouveau conteneur", url: "/admin/conteneurs/nouveau", icon: Plus, accent: true },
+  { title: "Clients", url: "/admin/clients", icon: Users },
+  { title: "Facturation", url: "/admin/facturation", icon: Receipt },
+  { title: "Notifications", url: "/admin/notifications", icon: Bell, badge: 3 },
+  { title: "Demandes de livraison", url: "/admin/livraisons", icon: Truck },
 ];
 
 const bottomItems = [
-  { title: "Paramètres", url: "/parametres", icon: Settings },
+  { title: "Paramètres", url: "/admin/parametres", icon: Settings },
 ];
 
 export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
   const { pathname } = useLocation();
-  const isActive = (path: string) => path === "/" ? pathname === "/" : pathname.startsWith(path);
+  const isActive = (path: string) => path === "/admin" ? pathname === "/admin" : pathname.startsWith(path);
 
   return (
     <Sidebar collapsible="icon" className="border-r border-sidebar-border">
@@ -51,7 +51,7 @@ export function AppSidebar() {
               {mainItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild isActive={isActive(item.url)} tooltip={item.title}>
-                    <NavLink to={item.url} end={item.url === "/"}>
+                    <NavLink to={item.url} end={item.url === "/admin"}>
                       <item.icon className={item.accent ? "text-primary" : ""} />
                       <span className={item.accent ? "text-primary font-medium" : ""}>{item.title}</span>
                       {item.badge && !collapsed && (
