@@ -132,7 +132,7 @@ export default function Dashboard() {
               {containers.slice(0, 6).map(c => (
                 <tr key={c.id} className="border-b border-border/30 hover:bg-muted/30 transition-colors">
                   <td className="py-3">
-                    <Link to={`/conteneurs/${c.id}`} className="font-mono text-sm font-medium hover:text-primary">{c.number}</Link>
+                    <Link to={`/admin/conteneurs/${c.id}`} className="font-mono text-sm font-medium hover:text-primary">{c.number}</Link>
                     <div className="text-[10px] text-muted-foreground">{c.type}</div>
                   </td>
                   <td className="py-3 text-sm">{getClient(c.clientId)?.company}</td>

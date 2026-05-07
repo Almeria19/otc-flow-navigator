@@ -69,7 +69,7 @@ export default function Containers() {
               {filtered.map(c => (
                 <tr key={c.id} className="border-b border-border/30 hover:bg-muted/20 transition-colors group">
                   <td className="px-4 py-4">
-                    <Link to={`/conteneurs/${c.id}`} className="font-mono text-sm font-semibold group-hover:text-primary transition-colors">{c.number}</Link>
+                    <Link to={`/admin/conteneurs/${c.id}`} className="font-mono text-sm font-semibold group-hover:text-primary transition-colors">{c.number}</Link>
                     <div className="text-[10px] text-muted-foreground mt-0.5">{c.origin} → {c.destination}</div>
                   </td>
                   <td className="px-4 py-4 text-sm">
