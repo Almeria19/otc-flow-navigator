@@ -24,20 +24,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero — tracking-first */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-glow" />
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.18), transparent 50%), radial-gradient(circle at 80% 70%, hsl(var(--primary) / 0.12), transparent 50%)`,
-        }} />
-        <svg className="absolute inset-0 w-full h-full opacity-[0.07]" viewBox="0 0 800 600">
-          <defs>
-            <pattern id="hg" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="hsl(var(--primary))" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="800" height="600" fill="url(#hg)" />
-        </svg>
-
+      <section className="relative">
         <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-medium text-primary mb-6">
             <Radio className="h-3 w-3 animate-pulse" />

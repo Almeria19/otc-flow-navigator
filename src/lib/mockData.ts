@@ -15,6 +15,7 @@ export interface Container {
   id: string;
   number: string;
   clientId: string;
+  clientIds?: string[];
   type: ContainerType;
   status: ContainerStatus;
   location: string;
@@ -45,8 +46,14 @@ export interface DeliveryRequest {
   clientId: string;
   containerId: string;
   destination: string;
-  status: "en_attente" | "validee" | "livree" | "refusee";
+  status: "en_attente" | "validee" | "livree" | "refusee" | "annulee" | "retard";
   requestedDate: string;
+  courierName?: string;
+  courierWhatsapp?: string;
+  plannedDate?: string;
+  plannedTime?: string;
+  pickupDeadline?: string;
+  penaltyAmount?: number;
 }
 
 export interface Notification {
@@ -88,11 +95,11 @@ export const invoices: Invoice[] = [
 ];
 
 export const deliveryRequests: DeliveryRequest[] = [
-  { id: "1", clientId: "C-001", containerId: "1", destination: "Zone Industrielle de Pikine, Dakar", status: "validee", requestedDate: "2026-05-02" },
-  { id: "2", clientId: "C-003", containerId: "2", destination: "Entrepôt Rufisque", status: "livree", requestedDate: "2026-04-28" },
+  { id: "1", clientId: "C-001", containerId: "1", destination: "Zone Industrielle de Pikine, Dakar", status: "validee", requestedDate: "2026-05-02", courierName: "Modou Diagne", courierWhatsapp: "+221770112233", plannedDate: "2026-05-08", plannedTime: "10:00", pickupDeadline: "2026-05-12" },
+  { id: "2", clientId: "C-003", containerId: "2", destination: "Entrepôt Rufisque", status: "livree", requestedDate: "2026-04-28", courierName: "Cheikh Sy", courierWhatsapp: "+221771234455", plannedDate: "2026-04-29", plannedTime: "14:00" },
   { id: "3", clientId: "C-002", containerId: "3", destination: "Thiès — Site Client", status: "en_attente", requestedDate: "2026-05-04" },
   { id: "4", clientId: "C-005", containerId: "4", destination: "Saint-Louis — Dépôt", status: "en_attente", requestedDate: "2026-05-05" },
-  { id: "5", clientId: "C-006", containerId: "6", destination: "Bamako — Mali", status: "livree", requestedDate: "2026-04-20" },
+  { id: "5", clientId: "C-006", containerId: "6", destination: "Bamako — Mali", status: "retard", requestedDate: "2026-04-20", courierName: "Ibrahima Ba", courierWhatsapp: "+221788776655", plannedDate: "2026-04-25", plannedTime: "09:00", pickupDeadline: "2026-04-28", penaltyAmount: 75000 },
 ];
 
 export const notifications: Notification[] = [

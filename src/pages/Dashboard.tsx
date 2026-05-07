@@ -35,7 +35,7 @@ export default function Dashboard() {
     <div className="space-y-6 max-w-[1600px] mx-auto">
       <div className="flex items-end justify-between flex-wrap gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Bonjour, Admin 👋</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Tableau de bord</h1>
           <p className="text-muted-foreground mt-1">Vue d'ensemble des opérations logistiques OTC.</p>
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -132,7 +132,7 @@ export default function Dashboard() {
               {containers.slice(0, 6).map(c => (
                 <tr key={c.id} className="border-b border-border/30 hover:bg-muted/30 transition-colors">
                   <td className="py-3">
-                    <Link to={`/conteneurs/${c.id}`} className="font-mono text-sm font-medium hover:text-primary">{c.number}</Link>
+                    <Link to={`/admin/conteneurs/${c.id}`} className="font-mono text-sm font-medium hover:text-primary">{c.number}</Link>
                     <div className="text-[10px] text-muted-foreground">{c.type}</div>
                   </td>
                   <td className="py-3 text-sm">{getClient(c.clientId)?.company}</td>

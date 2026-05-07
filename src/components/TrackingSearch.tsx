@@ -48,7 +48,7 @@ export default function TrackingSearch({ compact = false }: { compact?: boolean 
             />
           </div>
           <Button type="submit" disabled={loading} className="h-14 px-6 bg-gradient-primary shadow-glow hover:opacity-90 text-base">
-            {loading ? <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Recherche…</> : <>Suivre mon conteneur</>}
+            {loading ? <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Recherche…</> : <>Estimer l'arrivée</>}
           </Button>
         </div>
 
